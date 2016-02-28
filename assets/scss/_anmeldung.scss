@@ -6,6 +6,17 @@
   font-size: 56%;
 }
 
-.title-bar a {
-  color: $titlebar-color;
+.title-bar {
+  bottom: auto !important;
+
+  & a {
+    color: $titlebar-color;
+  }
+
+  &.is-stuck .title-bar-left {
+    background: url(../images/logo-affix.png) no-repeat top left;
+    padding-left: 131px;
+    margin: 2px;
+  }
 }
+

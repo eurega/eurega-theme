@@ -46,7 +46,7 @@
 				
 				<div class="off-canvas-content" data-off-canvas-content>
 					
-					<header class="header" role="banner">
+					<header id="eurega-header" class="header" role="banner">
 						<div id="inner-header" class="row">
 							<div class="large-12 medium-12 columns">
 								<h1>

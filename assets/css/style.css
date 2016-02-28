@@ -4468,5 +4468,11 @@ to display none.
 .anmeldung-subtitle {
   font-size: 56%; }
 
-.title-bar a {
-  color: #fefefe; }
+.title-bar {
+  bottom: auto !important; }
+  .title-bar a {
+    color: #fefefe; }
+  .title-bar.is-stuck .title-bar-left {
+    background: url(../images/logo-affix.png) no-repeat top left;
+    padding-left: 131px;
+    margin: 2px; }
