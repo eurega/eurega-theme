@@ -47,7 +47,18 @@
 				<div class="off-canvas-content" data-off-canvas-content>
 					
 					<header class="header" role="banner">
-							
+						<div id="inner-header" class="row">
+							<div class="large-12 medium-12 columns">
+								<h1>
+									<a href="<?php echo home_url(); ?>">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="EUREGA-Logo" style="width: 14%;" />
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/EUREGA-Schriftzug-blau.png" alt="EUREGA-Schriftzug" style="width: 30%;" />
+									</a>
+									<small class="anmeldung-subtitle"><?php  bloginfo('name'); ?></small>
+								</h1>
+							</div>
+						</div>
+
 						 <!-- This navs will be applied to the topbar, above all content 
 							  To see additional nav styles, visit the /parts directory -->
 						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
