@@ -4461,3 +4461,6 @@ to display none.
   .respond-form,
   nav {
     display: none; } }
+
+.overflow-fix {
+  overflow: scroll !important; }
