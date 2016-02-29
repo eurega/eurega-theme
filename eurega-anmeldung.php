@@ -21,7 +21,10 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 
         <div id="main" class="large-8 medium-8 columns first" role="main">
 
-            <?php get_template_part( 'partials/loop', 'archive' ); ?>
+            <?php
+            the_post();
+            get_template_part( 'parts/loop', 'archive' );
+            ?>
 
             <?php
 

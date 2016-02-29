@@ -12,7 +12,10 @@ Template Name: Eurega Ergebnisliste
 
             <div id="main" class="large-12 medium-12 small-12 columns overflow-fix" role="main">
 
-                <?php get_template_part( 'partials/loop', 'page' ); ?>
+                <?php
+                the_post();
+                get_template_part( 'parts/loop', 'page' );
+                ?>
 
             </div> <!-- end #main -->
 
