@@ -8,9 +8,11 @@
 
 .title-bar {
   bottom: auto !important;
+  padding: 0 0.5rem;
 
   & a {
     color: $titlebar-color;
+    line-height: 1.6 !important;
 
     &:hover {
       background: rgba(100, 100, 100, 0.5);

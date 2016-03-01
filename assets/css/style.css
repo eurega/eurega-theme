@@ -4469,9 +4469,11 @@ to display none.
   font-size: 56%; }
 
 .title-bar {
-  bottom: auto !important; }
+  bottom: auto !important;
+  padding: 0 0.5rem; }
   .title-bar a {
-    color: #fefefe; }
+    color: #fefefe;
+    line-height: 1.6 !important; }
     .title-bar a:hover {
       background: rgba(100, 100, 100, 0.5); }
   .title-bar.is-stuck .title-bar-left {
