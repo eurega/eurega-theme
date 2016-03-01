@@ -19,8 +19,9 @@
     }
   }
 
-  &.is-stuck .title-bar-left {
+  &.is-stuck .title-bar--logo-container {
     background: url(../images/logo-affix.png) no-repeat top left;
+    height: 2.8em;
     padding-left: 131px;
     margin: 2px;
   }

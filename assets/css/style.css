@@ -4476,8 +4476,9 @@ to display none.
     line-height: 1.6 !important; }
     .title-bar a:hover {
       background: rgba(100, 100, 100, 0.5); }
-  .title-bar.is-stuck .title-bar-left {
+  .title-bar.is-stuck .title-bar--logo-container {
     background: url(../images/logo-affix.png) no-repeat top left;
+    height: 2.8em;
     padding-left: 131px;
     margin: 2px; }
   .title-bar .show-for-small-only {
