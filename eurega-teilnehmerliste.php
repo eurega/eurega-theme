@@ -53,6 +53,8 @@ function printTeilnehmerliste() {
         }
         print('</table>');
         print('</div>');
+    } else {
+        print('<div class="callout alert">Bisher keine freigegebenen Mannschaften gefunden</div>');
     }
 
 }
