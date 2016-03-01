@@ -24,5 +24,18 @@
     padding-left: 131px;
     margin: 2px;
   }
+
+  .show-for-small-only {
+    padding: 0.5rem;
+
+    .menu {
+      border: 1px solid darkgrey;
+      border-radius: 20%;
+
+      .menu-icon {
+        margin: 5px;
+      }
+    }
+  }
 }
 

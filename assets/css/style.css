@@ -4480,3 +4480,10 @@ to display none.
     background: url(../images/logo-affix.png) no-repeat top left;
     padding-left: 131px;
     margin: 2px; }
+  .title-bar .show-for-small-only {
+    padding: 0.5rem; }
+    .title-bar .show-for-small-only .menu {
+      border: 1px solid darkgrey;
+      border-radius: 20%; }
+      .title-bar .show-for-small-only .menu .menu-icon {
+        margin: 5px; }
