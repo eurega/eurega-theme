@@ -5,10 +5,12 @@ Template Name: Eurega Teilnehmerliste
 
 function printTeilnehmerliste() {
 
+    $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+
     if (preg_match('(.*\.eurega\.dev)', $_SERVER['HTTP_HOST'])) {
-        $apiHost = 'http://api.eurega.dev/app_dev.php';
+        $apiHost = $protocol . 'api.eurega.dev/app_dev.php';
     } else {
-        $apiHost = 'http://api.eurega.org';
+        $apiHost = $protocol . 'api.eurega.org';
     }
 
     $eurega = json_decode(file_get_contents($apiHost . '/eurega/current'));

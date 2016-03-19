@@ -28,12 +28,14 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 
             <?php
 
+                $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+
                 if (preg_match('(.*\.eurega\.dev)', $_SERVER['HTTP_HOST'])) {
-//                    echo '<iframe class="anmeldung-iframe" src="http://api.eurega.dev/index.php" height="100%" width="100%" frameborder="0" />';
-                    echo file_get_contents('http://api.eurega.dev/index.php');
+//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.dev/index.php" height="100%" width="100%" frameborder="0" />';
+                    echo file_get_contents($protocol . 'api.eurega.dev/index.php');
                 } else {
-                    echo file_get_contents('http://api.eurega.org/index.php');
-//                    echo '<iframe class="anmeldung-iframe" src="http://api.eurega.org/index.php" height="100%" width="100%" frameborder="0" />';
+                    echo file_get_contents($protocol . 'api.eurega.org/index.php');
+//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.org/index.php" height="100%" width="100%" frameborder="0" />';
                 }
             ?>
 
