@@ -25,7 +25,7 @@ function joints_theme_support() {
 	);
 	
 	// Adding post format support
-	/* add_theme_support( 'post-formats',
+	 add_theme_support( 'post-formats',
 		array(
 			'aside',             // title less blurb
 			'gallery',           // gallery of images
@@ -37,11 +37,11 @@ function joints_theme_support() {
 			'audio',             // audio
 			'chat'               // chat transcript
 		)
-	); */
+	); 
 	
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
-	if ( ! isset( $content_width ) ) {
-		$content_width = 1200; // Default Foundation width
-	}		
+	$GLOBALS['content_width'] = apply_filters( 'joints_theme_support', 1200 );	
 	
 } /* end theme support */
+
+add_action( 'after_setup_theme', 'joints_theme_support' );

@@ -12,7 +12,7 @@ var gulp  = require('gulp'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower'),
-    babel = require('gulp-babel')
+    babel = require('gulp-babel'),
     browserSync = require('browser-sync').create();
 
 // Compile Sass, Autoprefix and minify
@@ -110,7 +110,7 @@ gulp.task('browsersync', function() {
     	'./assets/css/*.css', 
     	'./assets/js/*.js',
     	'**/*.php',
-    	'assets/images/**/*.{png,jpg,gif}',
+    	'assets/images/**/*.{png,jpg,gif,svg,webp}',
     ];
 
     browserSync.init(files, {
