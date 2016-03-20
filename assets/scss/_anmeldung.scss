@@ -1,3 +1,11 @@
+.is-accordion-submenu-parent.active > a {
+  opacity: 0.5;
+}
+
+.is-accordion-submenu {
+  margin-left: 15px;
+}
+
 .overflow-fix {
   overflow: scroll !important;
 }
