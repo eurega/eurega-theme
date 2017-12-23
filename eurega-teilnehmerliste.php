@@ -8,7 +8,7 @@ function printTeilnehmerliste() {
     $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 
     if (preg_match('(.*\.eurega\.dev)', $_SERVER['HTTP_HOST'])) {
-        $apiHost = $protocol . 'api.eurega.dev/app_dev.php';
+        $apiHost = $protocol . 'api.eurega.test/app_dev.php';
     } else {
         $apiHost = $protocol . 'api.eurega.org';
     }

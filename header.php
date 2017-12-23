@@ -3,8 +3,8 @@
 // Set the right CORS header, so that AJAX calls
 // from api.eurega.(dev|org) could be made.
 $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-if (strpos($_SERVER['HTTP_HOST'], 'eurega.dev') !== false) {
-    $apiHost = "api.eurega.dev";
+if (strpos($_SERVER['HTTP_HOST'], 'eurega.test') !== false) {
+    $apiHost = "api.eurega.test";
 } else {
     $apiHost = "api.eurega.org";
 }

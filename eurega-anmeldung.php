@@ -32,8 +32,8 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                 $queryParams = isset($_GET['previewToken']) ? '?previewToken=' . $_GET['previewToken'] : '';
 
                 if (preg_match('(.*\.eurega\.dev)', $_SERVER['HTTP_HOST'])) {
-//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.dev/index.php" height="100%" width="100%" frameborder="0" />';
-                    echo file_get_contents($protocol . 'api.eurega.dev/index.php' . $queryParams);
+//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.test/index.php" height="100%" width="100%" frameborder="0" />';
+                    echo file_get_contents($protocol . 'api.eurega.test/index.php' . $queryParams);
                 } else {
                     echo file_get_contents($protocol . 'api.eurega.org/index.php' . $queryParams);
 //                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.org/index.php" height="100%" width="100%" frameborder="0" />';
