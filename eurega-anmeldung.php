@@ -31,7 +31,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                 $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
                 $queryParams = isset($_GET['previewToken']) ? '?previewToken=' . $_GET['previewToken'] : '';
 
-                if (preg_match('(.*\.eurega\.dev)', $_SERVER['HTTP_HOST'])) {
+                if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
 //                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.test/index.php" height="100%" width="100%" frameborder="0" />';
                     echo file_get_contents($protocol . 'api.eurega.test/index.php' . $queryParams);
                 } else {
