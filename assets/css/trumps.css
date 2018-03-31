@@ -1,0 +1,10 @@
+
+.menu.medium-horizontal>li {
+    display: inline-block;
+}
+
+.show-for-medium.title-bar-left {
+    max-width: 75rem;
+    margin: 0 auto;
+    float: none;
+}
