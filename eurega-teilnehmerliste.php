@@ -3,16 +3,19 @@
 Template Name: Eurega Teilnehmerliste
 */
 
-function printTeilnehmerliste() {
+$protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 
-    $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
+    $apiHost = $protocol . 'api.eurega.test/app_dev.php';
+} else {
+    $apiHost = $protocol . 'api.eurega.org';
+}
 
-    if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
-        $apiHost = $protocol . 'api.eurega.test/app_dev.php';
-    } else {
-        $apiHost = $protocol . 'api.eurega.org';
-    }
+// Set the right CORS header, so that AJAX calls
+// from api.eurega.(dev|org) could be made.
+header("Access-Control-Allow-Origin: " . $protocol . $apiHost);
 
+function printTeilnehmerliste($apiHost) {
     $eurega = json_decode(file_get_contents($apiHost . '/eurega/current'));
     $mannschaften = json_decode(file_get_contents($apiHost . '/anmeldung/get/eurega-' . $eurega->jahr));
 
@@ -75,7 +78,7 @@ function printTeilnehmerliste() {
                 the_post();
                 get_template_part( 'parts/loop', 'page' );
                 ?>
-                <?php printTeilnehmerliste(); ?>
+                <?php printTeilnehmerliste($apiHost); ?>
 
             </div> <!-- end #main -->
 
