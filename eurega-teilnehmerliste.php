@@ -20,7 +20,7 @@ function printTeilnehmerliste($apiHost) {
     $mannschaften = json_decode(file_get_contents($apiHost . '/anmeldung/get/eurega-' . $eurega->jahr));
 
     if ($mannschaften) {
-        print('<div class="overflow-fix">');
+        print('<div class="js-tv-teilnehmerliste overflow-fix">');
         print('<table>');
         $lastStrecke = null;
         $lastKlasse = null;
