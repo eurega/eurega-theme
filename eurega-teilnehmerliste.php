@@ -33,7 +33,7 @@ function printTeilnehmerliste($apiHost) {
                 }
                 print('<tr><th colspan="7">' . $mannschaft->strecke . ' - ' . $mannschaft->klasse . '</th>');
                 print('<tr>
-                            <th>Startnummer</th>
+                            <th>Startnr</th>
                             <th>Mannschaftsname</th>
                             <th>Ruderer 1</th>
                             <th>Ruderer 2</th>
