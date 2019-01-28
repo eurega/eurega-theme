@@ -1,4 +1,10 @@
-<div id="post-not-found" class="hentry">
+<?php
+/**
+ * The template part for displaying a message that posts cannot be found
+ */
+?>
+
+<div class="post-not-found">
 	
 	<?php if ( is_search() ) : ?>
 		
@@ -33,7 +39,7 @@
 		</section> <!-- end search section -->
 		
 		<footer class="article-footer">
-		  <p><?php _e( 'This is the error message in the parts/missing-content.php template.', 'jointswp' ); ?></p>
+		  <p><?php _e( 'This is the error message in the parts/content-missing.php template.', 'jointswp' ); ?></p>
 		</footer>
 			
 	<?php endif; ?>
