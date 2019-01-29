@@ -29,15 +29,22 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
             <?php
 
                 $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-                $queryParams = isset($_GET['previewToken']) ? '?previewToken=' . $_GET['previewToken'] : '';
+                $queryParams = array();
+                if (isset($_GET['previewToken'])) {
+                    $queryParams['previewToken'] = $_GET['previewToken'];
+                }
 
                 if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
-//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.test/index.php" height="100%" width="100%" frameborder="0" />';
-                    echo file_get_contents($protocol . 'api.eurega.test/index.php' . $queryParams);
+                    $queryParams['dev'] = 'true';
+
+                    $tld = 'test';
                 } else {
-                    echo file_get_contents($protocol . 'api.eurega.org/index.php' . $queryParams);
-//                    echo '<iframe class="anmeldung-iframe" src="' . $protocol . 'api.eurega.org/index.php" height="100%" width="100%" frameborder="0" />';
+                    $tld = 'org';
                 }
+                $apiUrl = $protocol . sprintf('api.eurega.%s/anmeldung/form', $tld);
+                $apiUrl .= ($queryParams) ? '?' . http_build_query($queryParams) : '';
+
+                echo file_get_contents($apiUrl);
             ?>
 
         </div> <!-- end #main -->
