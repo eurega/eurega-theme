@@ -44,6 +44,10 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                 $apiUrl = $protocol . sprintf('api.eurega.%s/anmeldung/form', $tld);
                 $apiUrl .= ($queryParams) ? '?' . http_build_query($queryParams) : '';
 
+                if ($_GET['debug']) {
+                    print("API-URL: " . $apiUrl);
+                }
+
                 echo file_get_contents($apiUrl);
             ?>
 
