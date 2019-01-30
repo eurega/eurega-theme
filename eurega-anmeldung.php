@@ -64,7 +64,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                     print("API-URL: " . $apiUrl);
                 }
 
-            echo '<iframe class="anmeldung-iframe" src="'.$apiUrl.'" height="100%" width="100%" frameborder="0" />';
+            echo '<iframe class="anmeldung-iframe" src="'.$apiUrl.'" scrolling="no" noresize frameborder="0"></iframe>';
 //                echo file_get_contents($apiUrl);
             ?>
 
