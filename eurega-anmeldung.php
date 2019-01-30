@@ -14,12 +14,28 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 ?>
 
 <?php get_header(); ?>
-
+<style>
+    .anmeldung__container {
+        position: relative;
+        overflow: hidden;
+        height: calc(100vh - 86px);
+        width: 100vw;
+    }
+    .anmeldung__container iframe {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <div id="content">
 
     <div id="inner-content" class="row">
 
-        <div id="main" class="large-8 medium-8 columns first" role="main">
+        <div id="main" class="large-8 medium-8 columns first anmeldung__container" role="main">
 
             <?php
             the_post();
@@ -48,7 +64,8 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                     print("API-URL: " . $apiUrl);
                 }
 
-                echo file_get_contents($apiUrl);
+            echo '<iframe class="anmeldung-iframe" src="'.$apiUrl.'" height="100%" width="100%" frameborder="0" />';
+//                echo file_get_contents($apiUrl);
             ?>
 
         </div> <!-- end #main -->
