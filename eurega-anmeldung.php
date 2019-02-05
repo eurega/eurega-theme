@@ -70,8 +70,6 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 
         </div> <!-- end #main -->
 
-        <?php get_sidebar(); ?>
-
     </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
