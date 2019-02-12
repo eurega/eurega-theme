@@ -84,7 +84,8 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                 'http://www.eurega.org',
                 'https://www.eurega.org'
             ],
-            heightCalculationMethod: 'documentElementScroll'
+            heightCalculationMethod: 'documentElementScroll',
+            moveToAnchor: '#anmeldung_container'
         });
     }())
 </script>
