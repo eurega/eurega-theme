@@ -17,18 +17,10 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 <style>
     .anmeldung__container {
         position: relative;
-        overflow: hidden;
-        height: calc(100vh - 86px);
         width: 100vw;
     }
     .anmeldung__container iframe {
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        bottom: 0;
         width: 100%;
-        height: 100%;
     }
 </style>
 <div id="content">
@@ -69,7 +61,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                     $frontendUrl = '#!' . $_GET['url'];
                 }
 
-            echo '<iframe class="anmeldung-iframe" src="' . $apiUrl . $frontendUrl . '" scrolling="no" noresize allowfullscreen frameborder="0"></iframe>';
+            echo '<iframe id="anmeldung-iframe" src="' . $apiUrl . $frontendUrl . '" scrolling="no" noresize allowfullscreen frameborder="0"></iframe>';
 //                echo file_get_contents($apiUrl);
             ?>
 
@@ -78,5 +70,23 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
     </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
+<script src="//api.eurega.<?php echo strpos($_SERVER['HTTP_HOST'], '.test') !== false ? 'test' : 'de'; ?>/components/iframe-resizer/js/iframeResizer.min.js"></script>
+<script>
+    (function() {
+        iFrameResize({
+            checkOrigin: [
+                'http://api.eurega.test',
+                'https://api.eurega.test',
+                'http://www.eurega.test',
+                'https://www.eurega.test',
+                'http://api.eurega.org',
+                'https://api.eurega.org',
+                'http://www.eurega.org',
+                'https://www.eurega.org'
+            ],
+            heightCalculationMethod: 'documentElementScroll'
+        });
+    }())
+</script>
 
 <?php get_footer(); ?>
