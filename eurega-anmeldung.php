@@ -70,7 +70,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
     </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
-<script src="//api.eurega.<?php echo strpos($_SERVER['HTTP_HOST'], '.test') !== false ? 'test' : 'de'; ?>/components/iframe-resizer/js/iframeResizer.min.js"></script>
+<script src="//api.eurega.<?php echo strpos($_SERVER['HTTP_HOST'], '.test') !== false ? 'test' : 'org'; ?>/components/iframe-resizer/js/iframeResizer.min.js?v=3.6.5"></script>
 <script>
     (function() {
         iFrameResize({
