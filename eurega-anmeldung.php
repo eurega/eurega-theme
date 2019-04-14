@@ -27,7 +27,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 
     <div id="inner-content" class="row">
 
-        <div id="main" class="large-8 medium-8 columns first anmeldung__container" role="main">
+        <main id="main" class="large-8 medium-8 columns first anmeldung__container" role="main">
 
             <?php
             the_post();
@@ -65,7 +65,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
 //                echo file_get_contents($apiUrl);
             ?>
 
-        </div> <!-- end #main -->
+        </main> <!-- end #main -->
 
     </div> <!-- end #inner-content -->
 
