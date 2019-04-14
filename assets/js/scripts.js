@@ -35,8 +35,9 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
     // Sponsoren durchmischen.
-    $('#sidebar1').find('.widget > h4:contains("Sponsoren")').parent().find('> p').shuffle();
+    $('#sidebar1').find('.sponsoren > *').shuffle();
 });
+
 jQuery(document).foundation();
 /* 
 These functions make sure WordPress 
