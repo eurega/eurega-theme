@@ -1,7 +1,7 @@
 .sponsoren > * {
   align-items: center;
   border-bottom: 1px solid #aaa;
-  display: flex;
+  display: flex !important; // !important, because resized-images are displayed as table..
   justify-content: center;
   margin: 0; // Overwrite for foundation styling.
   min-height: 120px;

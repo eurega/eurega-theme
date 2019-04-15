@@ -4320,8 +4320,8 @@ to display none.
   -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #aaa;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0;
