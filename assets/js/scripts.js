@@ -35,7 +35,10 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
     // Sponsoren durchmischen.
-    $('#sidebar1').find('.sponsoren > *').shuffle();
+    $('#sidebar1').find('.sponsoren > *')
+      .shuffle()
+      .last()
+      .css('border-bottom', 'none');
 });
 
 jQuery(document).foundation();
