@@ -1,5 +1,9 @@
 .sponsoren > * {
+  align-items: center;
   border-bottom: 1px solid #aaa;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0; // Overwrite for foundation styling.
+  min-height: 120px;
   width: 100%;
 }
