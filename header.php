@@ -1,10 +1,10 @@
 <?php /** @package WordPress **/
 
 // Set the right CORS header, so that AJAX calls
-// from api.eurega.(dev|org) could be made.
+// from api.eurega.(test|org) could be made.
 $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 if (strpos($_SERVER['HTTP_HOST'], 'eurega.test') !== false) {
-    $apiHost = "api.eurega.test";
+    $apiHost = "api.eurega.test:${_ENV['API_PORT']}";
 } else {
     $apiHost = "api.eurega.org";
 }

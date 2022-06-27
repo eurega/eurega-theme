@@ -45,11 +45,10 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
                 if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
                     $queryParams['dev'] = 'true';
 
-                    $tld = 'test';
+                    $apiUrl = "${protocol}api.eurega.test:${_ENV['API_PORT']}/anmeldung/form";
                 } else {
-                    $tld = 'org';
+                    $apiUrl = "${protocol}api.eurega.org/anmeldung/form";
                 }
-                $apiUrl = $protocol . sprintf('api.eurega.%s/anmeldung/form', $tld);
                 $apiUrl .= ($queryParams) ? '?' . http_build_query($queryParams) : '';
 
                 if ($_GET['debug']) {
@@ -70,7 +69,7 @@ header('Expires: Wed, 11 Jan 1984 05:00:00 GMT');
     </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
-<script src="//api.eurega.<?php echo strpos($_SERVER['HTTP_HOST'], '.test') !== false ? 'test' : 'org'; ?>/components/iframe-resizer/js/iframeResizer.min.js?v=3.6.5"></script>
+<script src="//api.eurega.<?php echo strpos($_SERVER['HTTP_HOST'], '.test') !== false ? "test:${_ENV['API_PORT']}" : 'org'; ?>/components/iframe-resizer/js/iframeResizer.min.js?v=3.6.5"></script>
 <script>
     (function() {
         iFrameResize({

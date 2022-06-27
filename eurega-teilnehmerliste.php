@@ -6,13 +6,13 @@ Template Name: Eurega Teilnehmerliste
 $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 
 if (preg_match('(.*\.eurega\.test)', $_SERVER['HTTP_HOST'])) {
-    $apiHost = $protocol . 'api.eurega.test/app_dev.php';
+    $apiHost = $protocol . "api.eurega.test:${_ENV['API_PORT']}/app_dev.php";
 } else {
     $apiHost = $protocol . 'api.eurega.org';
 }
 
 // Set the right CORS header, so that AJAX calls
-// from api.eurega.(dev|org) could be made.
+// from api.eurega.(test|org) could be made.
 header("Access-Control-Allow-Origin: " . $protocol . $apiHost);
 
 function printTeilnehmerliste($apiHost) {
